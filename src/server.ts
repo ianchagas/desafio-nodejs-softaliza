@@ -10,4 +10,7 @@ app.use(router); // usa as rotas
 
 // Ao rodar a aplicação o servidor ficará "ouvindo" o localhost na porta 5000
 // Gera um console log para avisar que o servidor está funcionando e eu não ter que testar se já está funcionando
-app.listen(5000, () => console.log("Server is running"));
+const PORT = 5000;
+const HOST = '0.0.0.0';
+
+app.listen(PORT, HOST, () => console.log("Server is running"));

@@ -19,7 +19,10 @@ export class users1625635304027 implements MigrationInterface {
                     {
                         name: "id",
                         type: "uuid",
-                        isPrimary: true
+                        isPrimary: true,
+                        isUnique: true,
+                        generationStrategy: 'uuid',
+                        default: `uuid_generate_v4()`
                     },
                     {
                         name: "username",
@@ -49,7 +52,7 @@ export class users1625635304027 implements MigrationInterface {
                         type: "varchar",
                     }
                 ]
-            })
+            }), true
         )
     }
 

@@ -16,8 +16,8 @@ const AuthUsers = new AuthUserController(); // Variável para setor um novo "log
 
 // Para utilização dos middlewares deverá fazer sentido a sequência
 // A criação do usuário, precisa ser feita através dos passo: garante que está autênticado > garante que é admin > cria usuário
-router.post("/createUser", ensureAuth, ensureAdmin, CreateUsers.handle);
-router.post("/loginUser", AuthUsers.handle);
+router.post("/api/v1/create-user", ensureAuth, ensureAdmin, CreateUsers.handle);
+router.post("/api/v1/login-user", AuthUsers.handle);
 
 // O middleware de erros fica ao final, para aparecer todos os erros das requisições
 router.use(catchErrors);

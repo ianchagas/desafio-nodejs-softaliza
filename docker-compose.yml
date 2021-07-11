@@ -1,0 +1,25 @@
+version: "2"
+
+services:
+  #  server:
+  #    build: .
+  #    container_name: api-softaliza
+  #    ports:
+  #      - "5000:5000"
+  #    command: yarn dev
+  #    volumes:
+  #      - .:/usr/app
+  #    links:
+  #      - database
+  #    environment:
+  #      DATABASE_URL: postgres://postgres:123456@database:5432/desafiosoftaliza
+
+  database:
+    image: "postgres:latest"
+    container_name: database-softaliza
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_PASSWORD: 123456
+      POSTGRES_USER: postgres
+      POSTGRES_DB: desafiosoftaliza
