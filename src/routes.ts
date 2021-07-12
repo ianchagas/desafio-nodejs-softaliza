@@ -22,7 +22,7 @@ const ListAllBlogs = new ListAllBlogspostController();
 // A criação do usuário, precisa ser feita através dos passo: garante que está autênticado > garante que é admin > cria usuário
 router.post("/api/v1/create-user", ensureAuth, ensureAdmin, CreateUsers.handle);
 router.post("/api/v1/login-user", AuthUsers.handle);
-router.post("/api/v1/create-new-blog", CreateBlogs.handle);
+router.post("/api/v1/create-new-blog", ensureAuth, CreateBlogs.handle);
 
 
 router.get("/api/v1/list-all-blogs", ListAllBlogs.handle);
