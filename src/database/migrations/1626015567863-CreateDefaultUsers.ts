@@ -11,14 +11,14 @@ export class CreateDefaultUsers1626015567863 implements MigrationInterface {
         .into("users")
         .values([
             {
-                id: "d1941c64-931e-4b24-b6cc-3f07ae7bc164",
+                userid: "default",
                 username: "Admin Default",
                 useremail: "admin.default@softaliza.com.br",
                 useradmin: true,
                 password_hash: "$2y$08$PVSIEDLXavso9CF2pbFrNuwuPGkLT/ovbXbXwLUC16HL79ZkL13li"
             },
             {
-                id: "3feed1a7-7683-46b5-98f8-a6f250dedd15",
+                userid: "default",
                 username: "User Default",
                 useremail: "user.default@softaliza.com.br",
                 useradmin: false,

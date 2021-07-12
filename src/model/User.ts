@@ -1,4 +1,4 @@
-import {Entity, PrimaryColumn, PrimaryGeneratedColumn, Column, CreateDateColumn, UpdateDateColumn} from "typeorm";
+import {Entity, PrimaryGeneratedColumn, Column, CreateDateColumn, UpdateDateColumn} from "typeorm";
 import { v4 as uuid} from "uuid"; // A version foi utilizada como v4 pois já tinha visto exemplos de funcionamento com essa version
                                   // Pra um contexto geral (dessa projeto) não fazia muita diferença qual version usar
 
@@ -19,10 +19,8 @@ import { v4 as uuid} from "uuid"; // A version foi utilizada como v4 pois já ti
 @Entity("users")
 class User {
 
-    @PrimaryGeneratedColumn('uuid', {
-        name: 'id'
-    })
-    id: string;
+    @PrimaryGeneratedColumn()
+    userid: string;
 
     @Column()
     username: string;
@@ -44,8 +42,8 @@ class User {
 
     // Esse construtor serve pra basicamente setar um uuid para cada id gerado de forma dinâmica
     constructor() {
-        if(!this.id) {
-            this.id = uuid();
+        if(!this.userid) {
+            this.userid = uuid();
         }
     }
 }

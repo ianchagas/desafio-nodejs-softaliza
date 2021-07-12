@@ -50,7 +50,7 @@ class AuthUserService {
         const CreateNewToken = sign({ 
             useremail: UserExists.useremail
         }, "e6e70883ba3da86d7c3f8d83b3aa0d37", {
-            subject: UserExists.id,
+            subject: UserExists.userid,
             expiresIn: "1d"
         });
 

@@ -12,12 +12,15 @@ export class users1625635304027 implements MigrationInterface {
          * 
          */
 
+         await queryRunner
+         .query(`CREATE EXTENSION IF NOT EXISTS "uuid-ossp"`);
+
         await queryRunner.createTable(
             new Table({
                 name: "users",
                 columns: [
                     {
-                        name: "id",
+                        name: "userid",
                         type: "uuid",
                         isPrimary: true,
                         isUnique: true,
