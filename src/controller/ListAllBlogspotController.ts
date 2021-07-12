@@ -1,10 +1,10 @@
 import { Request, Response } from "express";
-import { ListAllBlogspotServices } from "../service/ListAllBlogspotService";
+import { ListAllBlogspotService } from "../service/ListAllBlogspotService";
 
 
 class ListAllBlogspostController {
     async handle(req: Request, res: Response) {
-        const listBlogspostService = new ListAllBlogspotServices();
+        const listBlogspostService = new ListAllBlogspotService();
 
         const ListBlogs = await listBlogspostService.ListAll();
 

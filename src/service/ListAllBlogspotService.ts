@@ -1,7 +1,7 @@
 import { getCustomRepository } from "typeorm";
 import { BlogspotsRepository } from "../repository/BlogspotsRepository";
 
-class ListAllBlogspotServices {
+class ListAllBlogspotService {
     async ListAll() {
         const blogspotRepository = getCustomRepository(BlogspotsRepository);
 
@@ -11,4 +11,4 @@ class ListAllBlogspotServices {
     }
 }
 
-export { ListAllBlogspotServices }
+export { ListAllBlogspotService }
