@@ -18,7 +18,12 @@ class CreateBlogspotService {
             throw new Error("Not a permissive create Blog without contents");
         }
 
-        const SlugfyTitle = slugify(title);
+        const SlugfyTitle = slugify(title, {
+            replacement: '-',
+            remove: undefined,
+            lower: true,
+            strict: true
+        });
 
         const blog = blogspotRepository.create({
             title,
