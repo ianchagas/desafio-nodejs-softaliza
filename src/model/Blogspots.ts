@@ -1,5 +1,4 @@
-import { Column, CreateDateColumn, Entity, JoinColumn, ManyToOne, PrimaryGeneratedColumn, UpdateDateColumn } from "typeorm";
-import { User } from "./User";
+import { Column, CreateDateColumn, Entity, PrimaryGeneratedColumn, UpdateDateColumn } from "typeorm";
 
 @Entity("blogspots")
 class Blogspots {
@@ -9,9 +8,6 @@ class Blogspots {
 
     @Column()
     created_by: string;
-    @JoinColumn({name: "userid"})
-    @ManyToOne(() => User)
-    user_create_blogspot: User
 
     @Column()
     title: string;

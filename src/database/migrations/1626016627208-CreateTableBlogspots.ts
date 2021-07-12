@@ -27,7 +27,7 @@ export class CreateTableBlogspots1626016627208 implements MigrationInterface {
                     },
                     {
                         name: "created_by",
-                        type: "uuid"
+                        type: "varchar"
                     },
                     {
                         name: "created_at",
