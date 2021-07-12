@@ -7,6 +7,7 @@ import { AuthUserController } from "./controller/AuthUserController";
 import { CreateBlogspotController } from "./controller/CreateBlogspotController";
 import { ListAllBlogspostController } from "./controller/ListAllBlogspotController";
 import { ListBlogspotBySlugController } from "./controller/ListBlogspotBySlugController";
+import { UpdateBlogspotController } from "./controller/UpdateBlogspotController";
 
 // Aqui nas rotas é onde vai ficar toda minha comunicação do endpoint com o restante das funções da aplicação
 // Especificamente ela é responsável por gerar a distribuição dos parâmetros de acordo com a necessidade
@@ -19,6 +20,7 @@ const AuthUsers = new AuthUserController(); // Variável para setor um novo "log
 const CreateBlogs = new CreateBlogspotController();
 const ListAllBlogs = new ListAllBlogspostController();
 const ListBlogsBySlug = new ListBlogspotBySlugController();
+const UpdateBlogs = new UpdateBlogspotController();
 
 // Para utilização dos middlewares deverá fazer sentido a sequência
 // A criação do usuário, precisa ser feita através dos passo: garante que está autênticado > garante que é admin > cria usuário
@@ -29,6 +31,8 @@ router.post("/api/v1/create-new-blog", ensureAuth, CreateBlogs.handle);
 
 router.get("/api/v1/list-all-blogs", ListAllBlogs.handle);
 router.get("/api/v1/list-blogs-by-slug/:slug", ListBlogsBySlug.handle);
+
+router.put("/api/v1/update-blogs-by-slug/:slug", UpdateBlogs.handle);
 
 // O middleware de erros fica ao final, para aparecer todos os erros das requisições
 router.use(catchErrors);
