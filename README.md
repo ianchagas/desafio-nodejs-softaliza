@@ -1,7 +1,6 @@
 <h1 align="center">Desafio Node.JS Softaliza</h1>
 <p align="center">Desafio de desenvolvimento de uma API para criação de Blogspots</p>
 
-<<<<<<< Updated upstream
 Conteúdos da aplicação
 =================
 # Sobre
@@ -37,81 +36,6 @@ Para os testes das rotas, recomendo a utilização do [Imsomnia](https://insomni
 # Clone este repositório
 $ git clone <https://github.com/ianchagas/desafio-nodejs-softaliza>
 
-=======
-<<<<<<< HEAD
-# Conteúdos da aplicação
-
-# Sobre
-
-Proposta de desafio de desenvolvimento para aplicação de vaga de desenvolvedor Backend Junior na [Softaliza](https://www.softaliza.com.br)
-
-# 💡 Features
-
-- ✅ Cadastro de usuários
-- ✅ Autênticação de usuários com JWT (esquema de Login)
-- ✅ Cadastro de Blogspots
-- ✅ Consulta de todos os Blogspots
-- ✅ Consulta de Blogspots pelo Slug
-- ✅ Alteração de Blogspots
-- ✅ Exclusão de Blogspots
-
-# ❗ Pré-requisitos
-
-Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
-
-- [Git](https://git-scm.com)
-- [Node.js](https://nodejs.org/en/)
-- [NPM](https://www.npmjs.com) ou [Yarn](https://yarnpkg.com)
-- [Docker](https://www.docker.com/products/docker-desktop) devidamente configurado.
-
-Além disto é bom ter um editor para trabalhar com o código como [VSCode](https://code.visualstudio.com/) e um terminal para os scripts. Recomendo o [GitBash](https://gitforwindows.org).
-
-Para os testes das rotas, recomendo a utilização do [Imsomnia](https://insomnia.rest/download)
-
-# 💻 Rodando o Back End (servidor)
-
-```bash
-# Clone este repositório
-$ git clone <https://github.com/ianchagas/desafio-nodejs-softaliza>
-
-=======
-Conteúdos da aplicação
-=================
-# Sobre
-
-Proposta de desafio de desenvolvimento para aplicação de vaga de desenvolvedor Backend Junior na [Softaliza](https://www.softaliza.com.br)
-
-# 💡 Features
-
-- ✅ Cadastro de usuários
-- ✅ Autênticação de usuários com JWT (esquema de Login)
-- ✅ Cadastro de Blogspots
-- ✅ Consulta de todos os Blogspots
-- ✅ Consulta de Blogspots pelo Slug
-- ✅ Alteração de Blogspots
-- ✅ Exclusão de Blogspots
-
-# ❗ Pré-requisitos
-
-Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
-- [Git](https://git-scm.com)
-- [Node.js](https://nodejs.org/en/)
-- [NPM](https://www.npmjs.com) ou [Yarn](https://yarnpkg.com)
-- [Docker](https://www.docker.com/products/docker-desktop) devidamente configurado.
-
-Além disto é bom ter um editor para trabalhar com o código como [VSCode](https://code.visualstudio.com/) e um terminal para os scripts. Recomendo o [GitBash](https://gitforwindows.org).
-
-Para os testes das rotas, recomendo a utilização do [Imsomnia](https://insomnia.rest/download)
-
-
-# 💻 Rodando o Back End (servidor)
-
-```bash
-# Clone este repositório
-$ git clone <https://github.com/ianchagas/desafio-nodejs-softaliza>
-
->>>>>>> 3f273abc4209530bd4e9c6e654f3b4e40e6eb94b
->>>>>>> Stashed changes
 # Acesse a pasta do projeto no terminal/cmd
 $ cd desafio-nodejs-softaliza
 
@@ -139,34 +63,14 @@ Vou deixar todas as rotas apontadas aqui, porém também vou deixar disponibiliz
 É possível testar a aplicação com os dados default já incluídos via migration.
 
 ## <b>POST<b>
-<<<<<<< Updated upstream
 * /api/v1/login-user - req.body - o retorno dele é um Token JWT válido para utilização nas outras rotas
-=======
-<<<<<<< HEAD
-
-- /api/v1/login-user - req.body - o retorno dele é um Token JWT válido para utilização nas outras rotas
-
-=======
-* /api/v1/login-user - req.body - o retorno dele é um Token JWT válido para utilização nas outras rotas
->>>>>>> 3f273abc4209530bd4e9c6e654f3b4e40e6eb94b
->>>>>>> Stashed changes
 ```
 {
 	"useremail": "admin.default@softaliza.com.br",
 	"password_hash": "123456"
 }
 ```
-<<<<<<< Updated upstream
 * /api/v1/create-user - req.body - useradmin é opcional - para efetuar a criação é necessário gerar um Token e passar ele pelo tipo Bearer - somente um useradmin pode criar um user
-=======
-<<<<<<< HEAD
-
-- /api/v1/create-user - req.body - useradmin é opcional - para efetuar a criação é necessário gerar um Token e passar ele pelo tipo Bearer - somente um useradmin pode criar um user
-
-=======
-* /api/v1/create-user - req.body - useradmin é opcional - para efetuar a criação é necessário gerar um Token e passar ele pelo tipo Bearer - somente um useradmin pode criar um user
->>>>>>> 3f273abc4209530bd4e9c6e654f3b4e40e6eb94b
->>>>>>> Stashed changes
 ```
 {
 	"username": "User Criação Teste",
@@ -175,17 +79,7 @@ Vou deixar todas as rotas apontadas aqui, porém também vou deixar disponibiliz
 	"useradmin": true
 }
 ```
-<<<<<<< Updated upstream
 * /api/v1/create-new-blog - req.body - para efetuar a criação é necessário gerar um Token e passar ele pelo tipo Bearer - somente um useradmin pode criar um blog - o Slug é gerado automáticamente conformente o título for adicionado
-=======
-<<<<<<< HEAD
-
-- /api/v1/create-new-blog - req.body - para efetuar a criação é necessário gerar um Token e passar ele pelo tipo Bearer - somente um useradmin pode criar um blog - o Slug é gerado automáticamente conformente o título for adicionado
-
-=======
-* /api/v1/create-new-blog - req.body - para efetuar a criação é necessário gerar um Token e passar ele pelo tipo Bearer - somente um useradmin pode criar um blog - o Slug é gerado automáticamente conformente o título for adicionado
->>>>>>> 3f273abc4209530bd4e9c6e654f3b4e40e6eb94b
->>>>>>> Stashed changes
 ```
 {
 	"title": "Teste de Rotas Post",
@@ -195,29 +89,12 @@ Vou deixar todas as rotas apontadas aqui, porém também vou deixar disponibiliz
 ```
 
 ## <b>GET<b>
-<<<<<<< Updated upstream
-=======
-<<<<<<< HEAD
-
-- /api/v1/list-all-blogs - req.json - lista todos os blogs já cadastrados, retornando um JSON com todas as informações disponíveis
-- /api/v1/list-blogs-by-slug/:slug - req.params - faz uma busca filtrando por um slug especifico, retornando um JSON com a informação disponível
-
-## <b>PUT<b>
-
-- /api/v1/update-blogs-by-slug/:slug - req.body/req.params - atualiza um Blogspot com novas informações, filtrando pelo slug - ao atualizar o Blogspot cria um novo slug de acordo com o novo título aplicado - para efetuar a alteração é necessário gerar um Token e passar ele pelo tipo Bearer - somente um useradmin pode alterar um blog
-
-=======
->>>>>>> Stashed changes
 * /api/v1/list-all-blogs - req.json - lista todos os blogs já cadastrados, retornando um JSON com todas as informações disponíveis
 * /api/v1/list-blogs-by-slug/:slug - req.params - faz uma busca filtrando por um slug especifico, retornando um JSON com a informação disponível
 
 
 ## <b>PUT<b>
 * /api/v1/update-blogs-by-slug/:slug - req.body/req.params - atualiza um Blogspot com novas informações, filtrando pelo slug - ao atualizar o Blogspot cria um novo slug de acordo com o novo título aplicado - para efetuar a alteração é necessário gerar um Token e passar ele pelo tipo Bearer - somente um useradmin pode alterar um blog
-<<<<<<< Updated upstream
-=======
->>>>>>> 3f273abc4209530bd4e9c6e654f3b4e40e6eb94b
->>>>>>> Stashed changes
 ```
 {
 	"title": "Teste de Update",
@@ -227,16 +104,7 @@ Vou deixar todas as rotas apontadas aqui, porém também vou deixar disponibiliz
 ```
 
 ## <b>DELETE<b>
-<<<<<<< Updated upstream
 * /api/v1/delete-blogs-by-slug/:slug - req.params - deleta um Blogspot filtrando pelo slug - para efetuar a exclusão é necessário gerar um Token e passar ele pelo tipo Bearer - somente um useradmin pode excluir um blog
-=======
-<<<<<<< HEAD
-
-- /api/v1/delete-blogs-by-slug/:slug - req.params - deleta um Blogspot filtrando pelo slug - para efetuar a exclusão é necessário gerar um Token e passar ele pelo tipo Bearer - somente um useradmin pode excluir um blog
-=======
-* /api/v1/delete-blogs-by-slug/:slug - req.params - deleta um Blogspot filtrando pelo slug - para efetuar a exclusão é necessário gerar um Token e passar ele pelo tipo Bearer - somente um useradmin pode excluir um blog
->>>>>>> 3f273abc4209530bd4e9c6e654f3b4e40e6eb94b
->>>>>>> Stashed changes
 
 <br>
   
