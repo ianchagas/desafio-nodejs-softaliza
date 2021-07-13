@@ -2,6 +2,12 @@ import {MigrationInterface, QueryRunner} from "typeorm";
 
 export class CreateDefaultBlogspots1626024552006 implements MigrationInterface {
 
+    /**
+     * 
+     * Optei por criar essa migration de blogsposts default, para demonstrar um pouco meu conhecimento em SQL puro
+     * 
+     */
+
     public async up(queryRunner: QueryRunner): Promise<void> {
         await queryRunner
         .query(`with catchAdmin as (

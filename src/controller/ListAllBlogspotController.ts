@@ -10,6 +10,8 @@ class ListAllBlogspostController {
 
         return res.json(ListBlogs);
     }
+
+    // Acessa o método de listagem e retorna os blogs, bem simples
 }
 
 export { ListAllBlogspostController}

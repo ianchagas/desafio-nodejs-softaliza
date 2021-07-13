@@ -15,10 +15,18 @@ class UpdateBlogspotService {
     async UpdateBlog({title, content, slug, created_by}: IUpdateBlogspot) {
         const blogspotRepository = getCustomRepository(BlogspotsRepository);
 
+        /**
+         * Se não tiver pelo menos um titulo não altera
+         */
+
         if(!title) {
-            throw new Error("Not a Permissive create blog without title");
+            throw new Error("It will not be allowed to create an untitled blog");
         }
 
+        /**
+         * Mesma funçãozinha de slug para o update, pois o usuário pode trocar o titulo
+         * É necessário refazer o processo aqui novamente
+         */
         const SlugfyTitle = slugify(title, {
             replacement: '-',
             remove: undefined,
@@ -26,6 +34,11 @@ class UpdateBlogspotService {
             strict: true
         });
 
+        /**
+         * Decidi utilizar os query Params para esse update como slug
+         * Seguindo o mesmo conceito de buscar pelo slug
+         */
+        
         const BlogUpdate = blogspotRepository.createQueryBuilder()
             .update(Blogspots)
             .set({title, content, slug:SlugfyTitle, created_by})

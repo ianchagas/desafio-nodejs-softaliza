@@ -2,6 +2,9 @@ import {MigrationInterface, QueryRunner} from "typeorm";
 
 export class CreateDefaultUsers1626015567863 implements MigrationInterface {
 
+    /**
+     * Inserção de dados default através do próprio TypeORM em função async
+     */
     public async up(queryRunner: QueryRunner): Promise<void> {
 
         await queryRunner
